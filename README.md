@@ -16,8 +16,8 @@ Está construido con **Laravel 12** y provee endpoints para crear, leer, actuali
 
 1. Clonar el repositorio:
 
-   git clone <URL_DEL_REPO>
-    cd backend
+   git clone https://github.com/DaviAgulham/tasks-api-backend
+   cd tasks-api-backend
 
 3. Instalar dependencias:
 
