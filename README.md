@@ -15,39 +15,53 @@ Está construido con **Laravel 12** y provee endpoints para crear, leer, actuali
 ## **Instalación**
 
 1. Clonar el repositorio:
-    git clone <URL_DEL_REPO>
+
+   git clone <URL_DEL_REPO>
     cd backend
 
-2. Instalar dependencias:
-    composer install
+3. Instalar dependencias:
 
-3. Crear archivo de entorno:
-    cp .env.example .env
+   composer install
 
-4. Generar key de aplicación:
-    php artisan key:generate
+5. Crear archivo de entorno:
 
-5. Configurar base de datos en .env:
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=tasks_db
-    DB_USERNAME=root
-    DB_PASSWORD=
+   cp .env.example .env
 
-6. Crear la base de datos en MySQL
+7. Generar key de aplicación:
+
+   php artisan key:generate
+
+9. Configurar base de datos en .env:
+
+   DB_CONNECTION=mysql
+
+   DB_HOST=127.0.0.1
+
+   DB_PORT=3306
+
+   DB_DATABASE=tasks_db
+
+   DB_USERNAME=root
+
+   DB_PASSWORD=
+
+10. Crear la base de datos en MySQL:
+
     CREATE DATABASE tasks_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-7. Ejecutar migraciones y seeders:
+12. Ejecutar migraciones y seeders:
+
     php artisan migrate --seed
 
-8. Levantar servidor local:
+14. Levantar servidor local:
+
     php artisan serve
 
 
 ## **Colección Postman**
 
 Hay un archivo llamado tasks_api.postman_collection.json en la raíz del proyecto.
+
 Importarlo en Postman para tener todos los endpoints listos.    
 
 ## **Notas**
