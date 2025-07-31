@@ -1,0 +1,110 @@
+{
+  "info": {
+    "name": "Tasks API",
+    "_postman_id": "12345678-aaaa-bbbb-cccc-1234567890ab",
+    "description": "Colección de endpoints para el CRUD de tareas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar tareas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"]
+        }
+      }
+    },
+    {
+      "name": "Listar tareas completadas",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/tasks?completed=true",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"],
+          "query": [
+            { "key": "completed", "value": "true" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar tareas por nombre",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/tasks?search=pan",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"],
+          "query": [
+            { "key": "search", "value": "pan" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear tarea",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Nueva tarea\",\n    \"completed\": false\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tasks",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"]
+        }
+      }
+    },
+    {
+      "name": "Mostrar tarea",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/tasks/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "1"]
+        }
+      }
+    },
+    {
+      "name": "Actualizar tarea",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Tarea actualizada\",\n    \"completed\": true\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tasks/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "1"]
+        }
+      }
+    },
+    {
+      "name": "Eliminar tarea",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{base_url}}/api/tasks/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "1"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
