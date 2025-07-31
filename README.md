@@ -53,6 +53,9 @@ Importarlo en Postman para tener todos los endpoints listos.
 ## **Notas**
 
 Por defecto la API usa MySQL. Si prefieres SQLite:
+
 Cambia en .env: DB_CONNECTION=sqlite
+
 Comenta las otras variables de conexión.
+
 Se incluye un seeder con datos iniciales para pruebas.
